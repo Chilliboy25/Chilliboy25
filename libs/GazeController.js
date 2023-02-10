@@ -46,7 +46,7 @@ class GazeController{
         //console.log(`GazeController.update: mode:${this._mode} elapsedTime=${elapsedTime.toFixed(2)} theta:${theta.toFixed(2)}`);
         switch(this._mode){
             case GazeController.Modes.HIDDEN:
-                if (elapsedTime>1){
+                if (elapsedTime>3){
                     this.mode = GazeController.Modes.GAZING;
                     this.ring.visible = true;
                 }else if (theta > 0.2 ){
